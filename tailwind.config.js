@@ -12,7 +12,6 @@ module.exports = {
                 'instrument-serif': ['var(--font-instrument-serif)', 'serif'],
                 'canterbury': ['var(--font-canterbury)', 'serif'],
                 'climate-crisis': ['Climate Crisis Local', 'sans-serif'],
-                'frijole': ['Frijole Local', 'cursive'], // Add Frijole
             },
         },
     },
