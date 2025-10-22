@@ -46,10 +46,12 @@ const NavLink: React.FC<{ item: NavLinks; onClick: () => void }> = ({ item, onCl
 const Logo: React.FC = () => {
     return (
         <Link href='/' className='flex items-center'>
-            <div className="w-10 h-10 bg-black dark:bg-white rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white dark:text-black font-climate-crisis text-sm">H</span>
+            <div className="w-10 h-10 bg-transpa rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white dark:text-black font-climate-crisis text-sm">
+                    <img src="/u-robo.png" alt="" />
+                </span>
             </div>
-            <span className="ml-3 font-climate-crisis text-xl text-black dark:text-white">HOMELY</span>
+            <span className="ml-3 font-climate-crisis text-xl text-black dark:text-white">U-Fill Academy</span>
         </Link>
     )
 }
@@ -242,12 +244,12 @@ const MegaNavbar: React.FC = () => {
                         </p>
                         <div className='space-y-2'>
                             <Link
-                                href="mailto:hello@homely.com"
+                                href="mailto:U-fillacademy@gmail.com"
                                 className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 font-climate-crisis text-sm'
                                 onClick={closeMobileMenu}
                             >
                                 <Icon icon={'ph:envelope-simple-bold'} width={14} height={14} />
-                                hello@homely.com
+                                Ufillacademy@gmail.com
                             </Link>
                             <Link
                                 href="tel:+1-212-456-7890"
