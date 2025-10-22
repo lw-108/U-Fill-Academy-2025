@@ -37,8 +37,8 @@ export default function AboutSection() {
           <br />
           We believe that every child deserves quality learning <br />opportunities, regardless of
           background or financial status. By offering free academic support, tuition classes, and
-          career guidance, <br />U Fill Academy ensures that underprivileged students get equal
-          access to <br /> knowledge and skills.
+          career guidance,U Fill Academy ensures that underprivileged students get equal
+          access to knowledge and skills.
           <br />
           <br />
           Along with core academics, we also provide Co-Curricular (CCA) and Extra-Curricular
