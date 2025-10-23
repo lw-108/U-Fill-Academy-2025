@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -40,8 +39,7 @@
   --sidebar-ring: oklch(0.65 0.2 270); /* Violet for sidebar focus */
   --font-instrument-serif: "Instrument Serif", serif;
   --font-figtree: "Figtree", sans-serif;
-  /* Add Climate Crisis font */
-  --font-climate-crisis: "Climate Crisis", sans-serif;
+  --font-bowlby: 'Bowlby One SC', sans-serif;
 }
 
 .dark {
@@ -80,8 +78,8 @@
   --sidebar-ring: oklch(0.7 0.25 270);
   --font-instrument-serif: "Instrument Serif", serif;
   --font-figtree: "Figtree", sans-serif;
-  /* Add Climate Crisis font for dark mode */
-  --font-climate-crisis: "Climate Crisis", sans-serif;
+  /* FIX: Use the same Bowlby One SC font in dark mode */
+  --font-bowlby: 'Bowlby One SC', sans-serif; /* Changed from Climate Crisis */
 }
 
 @theme inline {
@@ -124,8 +122,8 @@
   --font-instrument-serif: var(--font-instrument-serif);
   --font-sans: var(--font-figtree);
   --font-figtree: var(--font-figtree);
-  /* Add Climate Crisis to theme */
-  --font-climate-crisis: var(--font-climate-crisis);
+  /* Add Bowlby One SC to theme */
+  --font-bowlby: var(--font-bowlby);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   @keyframes marquee {
@@ -154,11 +152,30 @@
     @apply bg-background text-foreground;
     font-family: var(--font-figtree);
   }
-  
+}
+
+/* Force Bowlby One SC font with direct @font-face */
+@font-face {
+  font-family: 'Bowlby One SC';
+  src: url('/fonts/BowlbyOneSC-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply the font consistently in both themes */
+.font-bowlby {
+  font-family: 'Bowlby One SC', sans-serif !important; /* Force with !important */
 }
 
 
-/* Force Climate Crisis font with direct @font-face */
+/* Add this to your globals.css as additional insurance */
+.light .font-bowlby,
+.dark .font-bowlby {
+  font-family: 'Bowlby One SC', sans-serif !important;
+}
+
+/* Optional: Add Climate Crisis for other uses if needed */
 @font-face {
   font-family: 'Climate Crisis Local';
   src: url('/fonts/ClimateCrisis.ttf') format('truetype');
@@ -167,12 +184,9 @@
   font-display: swap;
 }
 
-/* Apply the font */
 .font-climate-crisis {
-  font-family: 'Climate Crisis Local', sans-serif !important;
+  font-family: 'Climate Crisis Local', sans-serif;
 }
-
-
 
 .instrument {
   font-family: var(--font-instrument-serif);

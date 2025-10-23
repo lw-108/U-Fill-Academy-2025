@@ -185,7 +185,8 @@ function ScrollCard({
                 className="flex flex-col relative rounded-xl w-[95vw] max-w-6xl mx-auto p-6 lg:p-12 border-2 border-foreground/20 bg-background shadow-2xl"
                 style={{
                     scale,
-                    top: `calc(-5vh + ${i * 25}px)`
+                    // Reduced top spacing to prevent hiding under header
+                    top: `calc(10vh + ${i * 15}px)`
                 }}
             >
                 {/* Accent Elements */}
@@ -371,11 +372,12 @@ export default function ScrollStackSection() {
     }, []);
 
     return (
-        <section id="courses" className="w-full py-20 bg-background">
+        <section id="courses" className="w-full bg-background">
+            {/* Reduced overall padding */}
             <div className="container mx-auto px-2">
-                {/* Section Header */}
-                <div className="text-center mb-2">
-                    <h2 className="font-climate-crisis text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-4">
+                {/* Section Header with reduced margins */}
+                <div className="text-center mb-4"> {/* Reduced from mb-16 to mb-4 */}
+                    <h2 className="font-bowlby text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-2"> {/* Reduced from mb-4 to mb-2 */}
                         U-Fill Academy Courses
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -383,8 +385,8 @@ export default function ScrollStackSection() {
                     </p>
                 </div>
 
-                {/* Scroll Cards Container */}
-                <div ref={container} className="my-[50vh] mb-[50vh]">
+                {/* Scroll Cards Container with minimal gap */}
+                <div ref={container} className="my-[10vh] mb-[20vh]"> {/* Drastically reduced from my-[30vh] to my-[10vh] */}
                     {projects.map((project, i) => {
                         const targetScale = 1 - ((projects.length - i) * 0.05);
                         return (

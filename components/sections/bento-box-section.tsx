@@ -89,7 +89,7 @@ export function BentoBoxSection() {
       <div className="max-w-6xl w-full mx-auto">
         <section id="about" className="relative z-10 px-6 py-16 md:py-24 bg-background">
           <div className="max-w-4xl mx-auto mb-12">
-            <h2 className="font-climate-crisis text-4xl md:text-6xl text-center font-normal text-foreground">
+            <h2 className="font-bowlby text-4xl md:text-6xl text-center font-normal text-foreground">
               The Basic Properties
             </h2>
           </div>

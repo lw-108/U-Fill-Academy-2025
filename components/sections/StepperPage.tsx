@@ -9,7 +9,7 @@ const StepperPage = () => {
         <section id="roadmap" className="w-full py-20 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="font-climate-crisis text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-4">
+                    <h2 className="font-bowlby text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-4">
                         Our Growth Journey
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ const StepperPage = () => {
                                     2025
                                 </span>
                             </div>
-                            <h2 className="font-climate-crisis text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
+                            <h2 className="font-bowlby text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
                                 Creating Unbreakable Bonds
                             </h2>
                             <div className="bg-card border border-foreground/20 rounded-xl p-8 shadow-lg">
@@ -72,7 +72,7 @@ const StepperPage = () => {
                                     2026
                                 </span>
                             </div>
-                            <h2 className="font-climate-crisis text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
+                            <h2 className="font-bowlby text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
                                 Academic Expansion
                             </h2>
                             <div className="bg-card border border-foreground/20 rounded-xl p-8 shadow-lg">
@@ -111,7 +111,7 @@ const StepperPage = () => {
                                     2027
                                 </span>
                             </div>
-                            <h2 className="font-climate-crisis text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
+                            <h2 className="font-bowlby text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
                                 Nationwide Expansion
                             </h2>
                             <div className="bg-card border border-foreground/20 rounded-xl p-8 shadow-lg">
@@ -146,7 +146,7 @@ const StepperPage = () => {
                                     2028
                                 </span>
                             </div>
-                            <h2 className="font-climate-crisis text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
+                            <h2 className="font-bowlby text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-6">
                                 Educational Revolution
                             </h2>
                             <div className="bg-card border border-foreground/20 rounded-xl p-8 shadow-lg">

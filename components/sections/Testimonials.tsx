@@ -85,7 +85,7 @@ export default function Testimonials() {
         <section id="testimonials" className="w-full py-20 bg-background">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="font-climate-crisis text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-4">
+                    <h2 className="font-bowlby text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-4">
                         What People Say
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

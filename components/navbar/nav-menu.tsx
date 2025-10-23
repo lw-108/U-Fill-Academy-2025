@@ -16,7 +16,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
           <Link 
             href="#courses" 
             className={cn(
-              "text-lg font-climate-crisis text-foreground/80 hover:text-foreground",
+              "text-lg font-bowlby text-foreground/80 hover:text-foreground",
               "transition-all duration-300 hover:scale-105",
               "px-4 py-3 rounded-xl hover:bg-foreground/5",
               "border-2 border-transparent hover:border-foreground/20",
@@ -33,7 +33,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
           <Link 
             href="#roadmap" 
             className={cn(
-              "text-lg font-climate-crisis text-foreground/80 hover:text-foreground",
+              "text-lg font-bowlby text-foreground/80 hover:text-foreground",
               "transition-all duration-300 hover:scale-105",
               "px-4 py-3 rounded-xl hover:bg-foreground/5",
               "border-2 border-transparent hover:border-foreground/20",
@@ -50,7 +50,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
           <Link 
             href="#testimonials" 
             className={cn(
-              "text-lg font-climate-crisis text-foreground/80 hover:text-foreground",
+              "text-lg font-bowlby text-foreground/80 hover:text-foreground",
               "transition-all duration-300 hover:scale-105",
               "px-4 py-3 rounded-xl hover:bg-foreground/5",
               "border-2 border-transparent hover:border-foreground/20",
@@ -67,7 +67,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
           <Link 
             href="#about" 
             className={cn(
-              "text-lg font-climate-crisis text-foreground/80 hover:text-foreground",
+              "text-lg font-bowlby text-foreground/80 hover:text-foreground",
               "transition-all duration-300 hover:scale-105",
               "px-4 py-3 rounded-xl hover:bg-foreground/5",
               "border-2 border-transparent hover:border-foreground/20",
@@ -84,7 +84,7 @@ export const NavMenu = (props: NavigationMenuProps) => (
           <Link 
             href="#contact" 
             className={cn(
-              "text-lg font-climate-crisis text-foreground/80 hover:text-foreground",
+              "text-lg font-bowlby text-foreground/80 hover:text-foreground",
               "transition-all duration-300 hover:scale-105",
               "px-4 py-3 rounded-xl hover:bg-foreground/5",
               "border-2 border-transparent hover:border-foreground/20",

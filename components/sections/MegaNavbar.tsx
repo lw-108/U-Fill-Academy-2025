@@ -31,7 +31,7 @@ const NavLink: React.FC<{ item: NavLinks; onClick: () => void }> = ({ item, onCl
             <Link
                 href={item.href}
                 onClick={onClick}
-                className={`block px-6 py-5 text-xl font-climate-crisis transition-all duration-300 border-b border-black/10 dark:border-white/10 ${pathname === item.href
+                className={`block px-6 py-5 text-xl   transition-all duration-300 border-b border-black/10 dark:border-white/10 ${pathname === item.href
                     ? 'bg-black text-white dark:bg-white dark:text-black'
                     : 'text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5'
                     }`}
@@ -46,12 +46,17 @@ const NavLink: React.FC<{ item: NavLinks; onClick: () => void }> = ({ item, onCl
 const Logo: React.FC = () => {
     return (
         <Link href='/' className='flex items-center'>
-            <div className="w-10 h-10 bg-transpa rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white dark:text-black font-climate-crisis text-sm">
+            <div className="w-10 h-10 bg-transparent rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white dark:text-black   text-sm">
                     <img src="/u-robo.png" alt="" />
                 </span>
             </div>
-            <span className="ml-3 font-climate-crisis text-xl text-black dark:text-white">U-Fill Academy</span>
+            <span className="ml-3 text-white font-bold">
+                <span className="text-blue-500 text-2xl">U</span>
+                <span className="text-white text-2xl">-Fill</span>
+                <br />
+                <span className="text-white text-lg font-medium">Academy</span>
+            </span>
         </Link>
     )
 }
@@ -133,7 +138,7 @@ const MegaNavbar: React.FC = () => {
                         <div className='hidden md:block'>
                             <Link
                                 href='tel:+1-212-456-789'
-                                className={`flex items-center gap-2 px-4 py-3 rounded-xl font-climate-crisis transition-all duration-300 text-sm border ${isHomepage && !sticky
+                                className={`flex items-center gap-2 px-4 py-3 rounded-xl   transition-all duration-300 text-sm border ${isHomepage && !sticky
                                     ? 'text-white border-white/30 hover:bg-white/10'
                                     : 'text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5'
                                     }`}
@@ -147,7 +152,7 @@ const MegaNavbar: React.FC = () => {
                         <div className='hidden md:flex items-center gap-2'>
                             {/* <Link
                                 href="/signin"
-                                className={`px-4 py-3 rounded-xl font-climate-crisis transition-all duration-300 text-sm border ${isHomepage && !sticky
+                                className={`px-4 py-3 rounded-xl   transition-all duration-300 text-sm border ${isHomepage && !sticky
                                         ? 'text-white border-white/30 hover:bg-white/10'
                                         : 'text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5'
                                     }`}
@@ -156,7 +161,7 @@ const MegaNavbar: React.FC = () => {
                             </Link> */}
                             <Link
                                 href="/signup"
-                                className={`px-4 py-3 rounded-xl font-climate-crisis transition-all duration-300 text-sm bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 border border-black dark:border-white`}
+                                className={`px-4 py-3 rounded-xl   transition-all duration-300 text-sm bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 border border-black dark:border-white`}
                             >
                                 Register
                             </Link>
@@ -165,14 +170,13 @@ const MegaNavbar: React.FC = () => {
                         {/* Hamburger Menu Button - Always Visible */}
                         <button
                             onClick={() => setNavbarOpen(!navbarOpen)}
-                            className={`flex items-center gap-2 p-3 rounded-xl font-climate-crisis transition-all duration-300 border ${isHomepage && !sticky
+                            className={`flex items-center gap-2 p-3 rounded-xl   transition-all duration-300 border ${isHomepage && !sticky
                                 ? 'text-white border-white/30 hover:bg-white/10'
                                 : 'text-black dark:text-white border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5'
                                 }`}
                             aria-label='Toggle mobile menu'
                         >
-                            <Icon icon={'ph:list'} width={18} height={18} />
-                            <span className='hidden sm:block text-sm'>Menu</span>
+                            <Icon icon={'ph:list'} width={20} height={20} />
                         </button>
                     </div>
                 </div>
@@ -197,9 +201,9 @@ const MegaNavbar: React.FC = () => {
                     <div className="flex items-center justify-between p-6 border-b border-black/10 dark:border-white/10">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-                                <span className="text-white dark:text-black font-climate-crisis text-sm">H</span>
+                                <span className="text-white dark:text-black   text-sm">H</span>
                             </div>
-                            <span className="font-climate-crisis text-black dark:text-white">Navigation</span>
+                            <span className="  text-black dark:text-white">Navigation</span>
                         </div>
                         <button
                             onClick={closeMobileMenu}
@@ -223,14 +227,14 @@ const MegaNavbar: React.FC = () => {
                             <Link
                                 href="/signin"
                                 onClick={closeMobileMenu}
-                                className='flex-1 py-4 text-center bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-xl font-climate-crisis hover:bg-black/10 dark:hover:bg-white/10 transition-all duration-300 border border-black/10 dark:border-white/10'
+                                className='flex-1 py-4 text-center bg-black/5 dark:bg-white/5 text-black dark:text-white rounded-xl   hover:bg-black/10 dark:hover:bg-white/10 transition-all duration-300 border border-black/10 dark:border-white/10'
                             >
                                 Sign In
                             </Link>
                             <Link
                                 href="/signup"
                                 onClick={closeMobileMenu}
-                                className='flex-1 py-4 text-center bg-black dark:bg-white text-white dark:text-black rounded-xl font-climate-crisis hover:bg-black/80 dark:hover:bg-white/80 transition-all duration-300 border border-black dark:border-white'
+                                className='flex-1 py-4 text-center bg-black dark:bg-white text-white dark:text-black rounded-xl   hover:bg-black/80 dark:hover:bg-white/80 transition-all duration-300 border border-black dark:border-white'
                             >
                                 Sign Up
                             </Link>
@@ -239,13 +243,13 @@ const MegaNavbar: React.FC = () => {
 
                     {/* Footer Contact Info */}
                     <div className='p-6 border-t border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5'>
-                        <p className='text-black/60 dark:text-white/60 font-climate-crisis text-sm mb-3'>
+                        <p className='text-black/60 dark:text-white/60   text-sm mb-3'>
                             Contact Us
                         </p>
                         <div className='space-y-2'>
                             <Link
                                 href="mailto:U-fillacademy@gmail.com"
-                                className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 font-climate-crisis text-sm'
+                                className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300   text-sm'
                                 onClick={closeMobileMenu}
                             >
                                 <Icon icon={'ph:envelope-simple-bold'} width={14} height={14} />
@@ -253,7 +257,7 @@ const MegaNavbar: React.FC = () => {
                             </Link>
                             <Link
                                 href="tel:+1-212-456-7890"
-                                className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300 font-climate-crisis text-sm'
+                                className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300   text-sm'
                                 onClick={closeMobileMenu}
                             >
                                 <Icon icon={'ph:phone-bold'} width={14} height={14} />

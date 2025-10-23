@@ -78,7 +78,7 @@ export default function ThirukkuralSection() {
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Section Title */}
                     <div className="max-w-4xl mx-auto mb-12">
-                        <h2 className="font-climate-crisis text-4xl md:text-6xl text-center font-normal text-foreground">
+                        <h2 className="font-bowlby text-4xl md:text-6xl text-center font-normal text-foreground">
                             Thirukkural
                         </h2>
                     </div>

@@ -93,7 +93,7 @@ export class NavigationSheet extends Component<
                   href={item.href}
                   onClick={this.handleLinkClick}
                   className={cn(
-                    "w-full max-w-xs py-4 text-center text-2xl font-climate-crisis uppercase tracking-wide rounded-2xl border border-foreground/20",
+                    "w-full max-w-xs py-4 text-center text-2xl font-bowlby uppercase tracking-wide rounded-2xl border border-foreground/20",
                     "hover:scale-105 hover:shadow-lg hover:border-foreground/40 transition-all duration-300"
                   )}
                 >
@@ -124,7 +124,7 @@ const Logo = () => (
     <div className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center shadow-md">
       <span className="text-background font-bold text-sm">U</span>
     </div>
-    <span className="font-climate-crisis text-xl text-foreground tracking-wide">
+    <span className="font-bowlby text-xl text-foreground tracking-wide">
       U-Fill
     </span>
   </div>

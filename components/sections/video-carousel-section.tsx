@@ -29,7 +29,7 @@ export default function VideoCarouselSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-climate-crisis text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-3">
+          <h2 className="font-bowlby text-3xl md:text-4xl lg:text-5xl font-normal text-foreground mb-3">
             Campus Life
           </h2>
           <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
