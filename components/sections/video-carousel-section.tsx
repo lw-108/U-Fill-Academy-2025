@@ -3,23 +3,23 @@
 import React from "react"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
-import { Play, Pause, Volume2, VolumeX, PictureInPicture, Maximize } from "lucide-react"
+import { Play, Pause, Volume2, VolumeX, PictureInPicture, Maximize, Loader } from "lucide-react"
 
 const videos = [
   { 
     title: "Photon-Rider", 
-    poster: "/campus-tour-poster.jpg",
-    src: "/vids/photon-rider-u-fill.mp4" // Add video sources
+    poster: "/campus-tour-poster.jpg", // Keeping original name
+    src: "/vids/photon-rider-u-fill.mp4" // Keeping original path
   },
   { 
     title: "Makerspace Demo", 
-    poster: "/makerspace-demo-poster.jpg",
-    src: "/videos/makerspace-demo.mp4"
+    poster: "/makerspace-demo-poster.jpg", // Keeping original name
+    src: "/videos/makerspace-demo.mp4" // Keeping original path
   },
   { 
     title: "Global Classroom", 
-    poster: "/global-classroom-poster.jpg",
-    src: "/videos/global-classroom.mp4"
+    poster: "/global-classroom-poster.jpg", // Keeping original name
+    src: "/videos/global-classroom.mp4" // Keeping original path
   },
 ]
 
@@ -71,6 +71,8 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
   const videoRef = React.useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = React.useState(false)
   const [isMuted, setIsMuted] = React.useState(true)
+  const [isLoading, setIsLoading] = React.useState(true)
+  const [hasError, setHasError] = React.useState(false)
 
   const onPlay = () => {
     videoRef.current?.play()
@@ -117,11 +119,32 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
   const handlePlay = () => setIsPlaying(true)
   const handlePause = () => setIsPlaying(false)
   const handleEnded = () => setIsPlaying(false)
+  const handleLoadStart = () => setIsLoading(true)
+  const handleLoadedData = () => setIsLoading(false)
+  const handleError = () => {
+    setHasError(true)
+    setIsLoading(false)
+  }
 
   return (
-    <div className="rounded-xl border border-border/50 bg-card p-3 md:p-4 shadow-sm hover:shadow-md transition-all duration-300">
+    <div className="rounded-xl border border-border/50 bg-card p-3 md:p-4 shadow-sm hover:shadow-md transition-all duration-300 group">
       {/* Video Container */}
-      <div className="aspect-video w-full overflow-hidden rounded-lg md:rounded-xl border border-border bg-muted relative group">
+      <div className="aspect-video w-full overflow-hidden rounded-lg md:rounded-xl border border-border bg-muted relative">
+        
+        {/* Loading State */}
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-muted z-10">
+            <Loader className="h-6 w-6 animate-spin text-muted-foreground" />
+          </div>
+        )}
+
+        {/* Error State */}
+        {hasError && (
+          <div className="absolute inset-0 flex items-center justify-center bg-red-50 z-20">
+            <p className="text-red-600 text-sm">Video failed to load</p>
+          </div>
+        )}
+
         <video
           ref={videoRef}
           controls={false}
@@ -134,25 +157,30 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
           onPlay={handlePlay}
           onPause={handlePause}
           onEnded={handleEnded}
+          onLoadStart={handleLoadStart}
+          onLoadedData={handleLoadedData}
+          onError={handleError}
         >
           <source src={src} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Play/Pause Overlay Button */}
-        <button
-          onClick={isPlaying ? onPause : onPlay}
-          className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-          aria-label={isPlaying ? "Pause video" : "Play video"}
-        >
-          <div className="bg-black/50 rounded-full p-2 md:p-3 backdrop-blur-sm">
-            {isPlaying ? (
-              <Pause className="h-5 w-5 md:h-6 md:w-6 text-white" />
-            ) : (
-              <Play className="h-5 w-5 md:h-6 md:w-6 text-white ml-0.5" />
-            )}
-          </div>
-        </button>
+        {!isLoading && !hasError && (
+          <button
+            onClick={isPlaying ? onPause : onPlay}
+            className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-30"
+            aria-label={isPlaying ? "Pause video" : "Play video"}
+          >
+            <div className="bg-black/50 rounded-full p-2 md:p-3 backdrop-blur-sm">
+              {isPlaying ? (
+                <Pause className="h-5 w-5 md:h-6 md:w-6 text-white" />
+              ) : (
+                <Play className="h-5 w-5 md:h-6 md:w-6 text-white ml-0.5" />
+              )}
+            </div>
+          </button>
+        )}
       </div>
 
       {/* Compact Controls */}
@@ -170,6 +198,7 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
               variant="ghost"
               className="h-7 w-7 p-0 hover:bg-muted"
               onClick={isPlaying ? onPause : onPlay}
+              disabled={hasError}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (
@@ -184,6 +213,7 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
               variant="ghost"
               className="h-7 w-7 p-0 hover:bg-muted"
               onClick={onMuteToggle}
+              disabled={hasError}
               aria-label={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? (
@@ -200,6 +230,7 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
               variant="ghost"
               className="h-7 w-7 p-0 hover:bg-muted hidden sm:flex"
               onClick={onPip}
+              disabled={hasError}
               aria-label="Picture in Picture"
             >
               <PictureInPicture className="h-3 w-3" />
@@ -210,6 +241,7 @@ function VideoCard({ title, poster, src, idx }: { title: string; poster: string;
               variant="ghost"
               className="h-7 w-7 p-0 hover:bg-muted"
               onClick={onFullscreen}
+              disabled={hasError}
               aria-label="Fullscreen"
             >
               <Maximize className="h-3 w-3" />
