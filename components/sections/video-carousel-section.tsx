@@ -8,7 +8,7 @@ import { Play, Pause, Volume2, VolumeX, PictureInPicture, Maximize, Loader } fro
 const videos = [
   { 
     title: "Photon-Rider", 
-    poster: "/campus-tour-poster.jpg", // Keeping original name
+    poster: "/images/photon-rider.png", // Keeping original name
     src: "/vids/photon-rider-u-fill.mp4" // Keeping original path
   },
   { 

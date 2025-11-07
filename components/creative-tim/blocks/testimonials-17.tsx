@@ -8,36 +8,22 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const SLIDES = [
   {
-    image: "/images/parent-icon.svg",
-    name: "Sarah Johnson",
-    role: "Parent of 2 Students",
+    image: "https://v3.material-tailwind.com/logo/netflix.svg",
+    name: "Louis Miriam",
+    role: "COO @ Netflix",
     quote:
-      "U-Fill Academy has completely transformed my children's attitude towards learning. The personalized approach and caring mentors have helped them discover their true potential. They actually look forward to attending classes now!",
+      "Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.",
   },
   {
-    image: "/images/student-icon.svg",
-    name: "Michael Chen",
-    role: "Grade 10 Student",
+    image: "https://v3.material-tailwind.com/logo/coinbase.svg",
+    name: "John Down",
+    role: "CEO @ Coinbase",
     quote:
-      "The project-based learning at U-Fill Academy made complex subjects like coding and robotics accessible and fun. I went from struggling with math to winning our regional science competition. This academy truly understands how students learn best.",
-  },
-  {
-    image: "/images/teacher-icon.svg",
-    name: "Dr. Priya Patel",
-    role: "Mathematics Instructor",
-    quote:
-      "Teaching at U-Fill Academy has been incredibly rewarding. The small class sizes and innovative curriculum allow us to focus on each student's unique learning journey. Watching them grow in confidence and capability is what makes this so special.",
-  },
-  {
-    image: "/images/alumni-icon.svg",
-    name: "David Rodriguez",
-    role: "Alumni & College Student",
-    quote:
-      "The foundation I built at U-Fill Academy prepared me perfectly for university. The critical thinking skills and hands-on experience gave me a significant advantage in my engineering program. I'm forever grateful for their holistic approach to education.",
+      "Knowledge is either from direct experience or from verifiable, falsifiable science. There is knowledge that is transmitted but not verifiable / falsifiable. They're slowed down by their perception of themselves.",
   },
 ]
 
-export function Testimonials() {
+export default function TestimonialsBlock() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const nextSlide = () => {
@@ -49,19 +35,10 @@ export function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-bowlby text-4xl md:text-6xl text-center font-normal text-foreground mb-4">
-            Success Stories
-          </h2>
-          <p className="text-lg text-muted-foreground dark:text-gray-400 max-w-2xl mx-auto">
-            Hear from our students, parents, and educators about their U-Fill Academy journey
-          </p>
-        </div>
-
-        <Card className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-purple-700 dark:from-blue-900 dark:to-purple-900 p-6 shadow-2xl">
-          <span className="absolute inset-0 h-full w-full bg-gradient-to-br from-blue-600/90 to-purple-700/90 dark:from-blue-900/90 dark:to-purple-900/90 backdrop-blur-sm" />
+        <Card className="relative overflow-hidden rounded-2xl bg-[url('https://images.unsplash.com/photo-1638438134099-a91e5373aaf0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center p-6">
+          <span className="absolute inset-0 h-full w-full bg-gradient-to-br from-black/80 to-black/60 backdrop-blur-sm" />
 
           <CardContent className="relative grid w-full grid-cols-1 items-center gap-8 px-6 py-12 md:grid-cols-12 md:px-12 md:py-16">
             <div className="col-span-full md:col-span-8">
@@ -81,14 +58,12 @@ export function Testimonials() {
             </div>
 
             <div className="col-span-full flex items-center justify-center md:col-span-4">
-              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm border border-white/20">
-                <div className="h-20 w-20 rounded-full bg-white/20 flex items-center justify-center">
-                  <div className="h-12 w-12 bg-white/30 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">
-                      {SLIDES[currentSlide].name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                </div>
+              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+                <img
+                  src={SLIDES[currentSlide].image}
+                  alt="company logo"
+                  className="h-16 md:h-20"
+                />
               </div>
             </div>
           </CardContent>

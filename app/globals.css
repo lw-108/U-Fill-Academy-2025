@@ -222,3 +222,21 @@
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration, 40s) linear infinite;
 }
+
+/* hide default cursor on devices with fine pointers (desktop) */
+@media (pointer: fine) {
+  html, body, #__next {
+    cursor: none !important;
+  }
+
+  input, textarea, select, [contenteditable="true"] {
+    cursor: text !important; /* keep text cursor for inputs */
+  }
+}
+
+/* avoid custom cursor on touch devices */
+@media (pointer: coarse) {
+  html, body, #__next {
+    cursor: auto !important;
+  }
+}

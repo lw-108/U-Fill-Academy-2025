@@ -46,17 +46,30 @@ const NavLink: React.FC<{ item: NavLinks; onClick: () => void }> = ({ item, onCl
 const Logo: React.FC = () => {
     return (
         <Link href='/' className='flex items-center'>
-            <div className="w-10 h-10 bg-transparent rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white dark:text-black   text-sm">
-                    <img src="/u-robo.png" alt="" />
-                </span>
+            <div className="w-15 h-15 flex items-center justify-center">
+                <img
+                    src="/u-robo.png"
+                    alt="U-Fill Academy Logo"
+                    className="w-full h-full object-contain select-none"
+                />
             </div>
-            <span className="ml-3 text-white font-bold">
-                <span className="text-blue-500 text-2xl">U</span>
-                <span className="text-white text-2xl">-Fill</span>
-                <br />
-                <span className="text-white text-lg font-medium">Academy</span>
+            <span className="flex items-center">
+                {/* Big U */}
+                <span className="text-blue-500 text-7xl font-extrabold leading-none mr-1">
+                    U
+                </span>
+
+                {/* FILL + ACADEMY stacked closely */}
+                <span className="flex flex-col leading-[0.9]">
+                    <span className="text-black dark:text-white text-2xl font-bold">
+                        FILL
+                    </span>
+                    <span className="text-black dark:text-white text-sm font-medium tracking-tight">
+                        ACADEMY
+                    </span>
+                </span>
             </span>
+
         </Link>
     )
 }
@@ -199,12 +212,31 @@ const MegaNavbar: React.FC = () => {
                 <div className="flex flex-col h-full">
                     {/* Header */}
                     <div className="flex items-center justify-between p-6 border-b border-black/10 dark:border-white/10">
-                        <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-                                <span className="text-white dark:text-black   text-sm">H</span>
+                        <Link href='/' className='flex items-center'>
+                            <div className="w-15 h-15 flex items-center justify-center">
+                                <img
+                                    src="/u-robo.png"
+                                    alt="U-Fill Academy Logo"
+                                    className="w-full h-full object-contain select-none"
+                                />
                             </div>
-                            <span className="  text-black dark:text-white">Navigation</span>
-                        </div>
+                            <span className="flex items-center">
+                                {/* Big U */}
+                                <span className="text-blue-500 text-7xl font-extrabold leading-none mr-1">
+                                    U
+                                </span>
+
+                                {/* FILL + ACADEMY stacked closely */}
+                                <span className="flex flex-col leading-[0.9]">
+                                    <span className="text-black dark:text-white text-2xl font-bold">
+                                        FILL
+                                    </span>
+                                    <span className="text-black dark:text-white text-sm font-medium tracking-tight">
+                                        ACADEMY
+                                    </span>
+                                </span>
+                            </span>
+                        </Link>
                         <button
                             onClick={closeMobileMenu}
                             aria-label='Close mobile menu'

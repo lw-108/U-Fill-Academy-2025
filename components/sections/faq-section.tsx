@@ -1,63 +1,56 @@
-"use client"
+import { Check, PhoneCall } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-
-const faqs = [
-  {
-    q: "What programs does U-Fill Academy offer for young learners?",
-    a: "We offer specially designed programs that foster creativity and foundational skills for children of all ages.",
-  },
-  {
-    q: "How does U-Fill support holistic learning?",
-    a: "Our approach balances academics, creativity, and well-being—combining projects, mentorship, and reflection.",
-  },
-  {
-    q: "Is there global collaboration in the curriculum?",
-    a: "Yes. Students participate in cross-cultural projects and virtual exchanges that broaden perspectives.",
-  },
-  {
-    q: "How can I apply?",
-    a: "Use the Apply Now button or contact our admissions team—we’ll guide you through each step.",
-  },
-]
-
-export default function FAQSection() {
-  return (
-    <section id="faq" className="relative z-10 px-6 py-16 md:py-24 bg-background">
-      <div className="max-w-3xl mx-auto">
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="font-bowlby text-4xl md:text-6xl text-center font-normal text-foreground">
-            Frequently Asked Questions
-          </h2>
+export const FAQ1 = () => (
+  <div className="w-full py-20 lg:py-40">
+    <div className="container mx-auto">
+      <div className="grid lg:grid-cols-2 gap-10">
+        <div className="flex gap-10 flex-col">
+          <div className="flex gap-4 flex-col">
+            <div>
+              <Badge variant="outline">FAQ</Badge>
+            </div>
+            <div className="flex gap-2 flex-col">
+              <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
+                This is the start of something new
+              </h4>
+              <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground  text-left">
+                Managing a small business today is already tough. Avoid further
+                complications by ditching outdated, tedious trade methods. Our
+                goal is to streamline SMB trade, making it easier and faster
+                than ever.
+              </p>
+            </div>
+            <div className="">
+              <Button className="gap-4" variant="outline">
+                Any questions? Reach out <PhoneCall className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
         </div>
-        <Accordion type="single" collapsible className="w-full text-5xl">
-          {faqs.map((f, i) => (
-            <AccordionItem key={f.q} value={`item-${i + 1}`} className="border-border">
-              <AccordionTrigger className="text-left text-foreground">{f.q}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
+        <Accordion type="single" collapsible className="w-full">
+          {Array.from({ length: 8 }).map((_, index) => (
+            <AccordionItem key={index} value={"index-" + index}>
+              <AccordionTrigger>
+                This is the start of something new
+              </AccordionTrigger>
+              <AccordionContent>
+                Managing a small business today is already tough. Avoid further
+                complications by ditching outdated, tedious trade methods. Our
+                goal is to streamline SMB trade, making it easier and faster
+                than ever.
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-      {/* Call to Action */}
-      <div className="text-center mt-20">
-        <div className="bg-card border border-foreground/20 rounded-xl p-8 max-w-2xl mx-auto shadow-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4 font-frijole">
-            Ready to Start Your Learning Journey?
-          </h3>
-          <p className="text-muted-foreground mb-6">
-            Join U-Fill Academy and unlock your potential with expert-guided courses
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-foreground text-background px-8 py-3 rounded-lg font-semibold hover:bg-foreground/90 transition-colors shadow-lg border-2 border-foreground">
-              Enroll Now
-            </button>
-            <button className="border-2 border-foreground text-foreground px-8 py-3 rounded-lg font-semibold hover:bg-foreground hover:text-background transition-colors">
-              View All Courses
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+    </div>
+  </div>
+);
