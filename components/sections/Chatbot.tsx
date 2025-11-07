@@ -91,13 +91,11 @@ const Chatbot = () => {
             <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-44 h-44 cursor-pointer select-none translate-y-6"
+                className="w-44 h-44 cursor-pointer select-none -translate-y-12 -translate-x-12"
                 onClick={() => setOpen(!open)}
             >
                 <div className="relative w-80 h-80 overflow-hidden rounded-full cursor-pointer select-none">
-                    <div className="absolute -bottom-6 inset-x-0"> {/* moves it down */}
                         <Spline scene="https://prod.spline.design/FsF2shqYFYXmma4y/scene.splinecode" />
-                    </div>
                 </div>
 
             </motion.div>
