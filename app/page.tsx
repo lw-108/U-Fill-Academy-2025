@@ -13,7 +13,7 @@ import VideoCarouselSection from "@/components/sections/video-carousel-section";
 import {Testimonials} from "@/components/sections/Testimonials";
 import {FAQ1} from "@/components/sections/faq-section";
 import Chatbot from "@/components/sections/Chatbot";
-import SiteFooter from "@/components/sections/footer";
+import {Footer7} from "@/components/sections/footer";
 
 export default function Page() {
   return (
@@ -39,7 +39,7 @@ export default function Page() {
         <Testimonials />
         <FAQ1 />
         <Chatbot/>
-        <SiteFooter />
+        <Footer7 />
       </main>
     </>
   );
