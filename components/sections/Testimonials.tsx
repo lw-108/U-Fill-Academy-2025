@@ -8,32 +8,32 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const SLIDES = [
   {
-    image: "/images/parent-icon.svg",
-    name: "Sarah Johnson",
-    role: "Parent of 2 Students",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjX4vMi6hg0wEYSAhMon7DgGZ5ResxIX90BPSShw643PVIItg6Y=w38-h38-p-rp-mo-br100",
+    name: "All Serious",
+    role: "Student",
     quote:
-      "U-Fill Academy has completely transformed my children's attitude towards learning. The personalized approach and caring mentors have helped them discover their true potential. They actually look forward to attending classes now!",
+      "My experience at Ufill Academy has been truly amazing! The staff are incredibly kind and supportive, creating a great learning environment. I enrolled in the AI and Robotics course, and it was both informative and enjoyable. I even received a certification upon completion, which I'm very proud of.What’s more, some of my relatives have also joined Ufill Academy to learn AI, and they’re loving the experience just as much. They’re learning a lot and having fun along the way.Thank you, Ufill Academy, for this wonderful learning journey!",
   },
   {
     image: "/images/student-icon.svg",
-    name: "Michael Chen",
-    role: "Grade 10 Student",
+    name: "மகரந்தன் மா.வசந்த்குமார்",
+    role: "Parent",
     quote:
-      "The project-based learning at U-Fill Academy made complex subjects like coding and robotics accessible and fun. I went from struggling with math to winning our regional science competition. This academy truly understands how students learn best.",
+      "சிறந்ததொரு முன்னெடுப்பு இளைய தலைமுறையினர் தனக்காக மட்டுமல்ல தன்னைச் சார்ந்தவர்களுக்குமானது தான் என நிரூபிக்க மாணவர்களை நோக்கிய எதிர்கால செயல்பாட்டுக்கான நிகழ்வுகள் இன்னும் தொடரட்டும் வாழ்த்துகள் .... U fill Academy - Yes U fill Definitely.... Your Growth and Activities in Stimulation. The initiative and leadership in teaching the next generation technical skills is commendable.",
   },
   {
     image: "/images/teacher-icon.svg",
-    name: "Dr. Priya Patel",
-    role: "Mathematics Instructor",
+    name: "Mercy Sangeetha",
+    role: "Student",
     quote:
-      "Teaching at U-Fill Academy has been incredibly rewarding. The small class sizes and innovative curriculum allow us to focus on each student's unique learning journey. Watching them grow in confidence and capability is what makes this so special.",
+      "A great place to learn AI, IoT, and robotics with practical, student-friendly training",
   },
   {
     image: "/images/alumni-icon.svg",
-    name: "David Rodriguez",
-    role: "Alumni & College Student",
+    name: "Narmadha A",
+    role: "Student",
     quote:
-      "The foundation I built at U-Fill Academy prepared me perfectly for university. The critical thinking skills and hands-on experience gave me a significant advantage in my engineering program. I'm forever grateful for their holistic approach to education.",
+      "This class was very useful for my own experience and the staff was very kind and supportive so thank you for your free python class",
   },
 ]
 

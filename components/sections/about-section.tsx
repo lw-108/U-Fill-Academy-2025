@@ -56,17 +56,25 @@ export default function AboutSection() {
                 className="text-base sm:text-lg bg-background md:text-2xl leading-relaxed text-justify text-gray-800 dark:text-gray-200"
               >
                 <p className="mb-6">
-                  At{" "}
                   <span className="font-semibold text-black dark:text-white">
                     U-Fill Academy
                   </span>
-                  , we believe that education should be more than just textbooks and tests. Our mission is to help every student discover their unique potential through innovative learning experiences and real-world application.
+                  is an educational initiative built on the principle of “Education for All.”
+                  Our core motive is to serve society by providing free and accessible education to tribal
+                  students and children from economically weaker sections.
                 </p>
                 <p className="mb-6">
-                  We combine technology, creativity, and mentorship to create a dynamic environment where students not only excel academically but also grow emotionally and intellectually.
+                  We believe that every child deserves quality learning opportunities, regardless of
+                  background or financial status. By offering free academic support, tuition classes, and
+                  career guidance, U Fill Academy ensures that underprivileged students get equal
+                  access to knowledge and skills.
                 </p>
                 <p className="mb-6">
-                  From coding and robotics to arts, fitness, and life skills — we ensure each learner gains the confidence and curiosity to lead in an ever-changing world.
+                  Along with core academics, we also provide Co-Curricular (CCA) and Extra-Curricular
+                  (ECA) programs that help students grow holistically. From foundation classes,
+                  JEE/NEET/GATE guidance, to sports, arts, personality development, and skill training,
+                  we create an environment where learning is not just about passing exams, but also
+                  about building confidence, creativity, and character.
                 </p>
               </motion.div>
             </motion.div>
@@ -119,10 +127,10 @@ export default function AboutSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
         >
           {[
-            { number: "50+", label: "Courses" },
-            { number: "1000+", label: "Students" },
+            { number: "30+", label: "Courses" },
+            { number: "100+", label: "Students" },
             { number: "25+", label: "Expert Tutors" },
-            { number: "5+", label: "Years Experience" },
+            { number: "3+", label: "Years Experience" },
           ].map((stat, index) => (
             <motion.div
               key={index}

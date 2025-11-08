@@ -16,11 +16,16 @@ interface NavLinks {
 // Navigation Data
 const navLinks: NavLinks[] = [
     { label: 'Home', href: '/' },
-    { label: 'Properties', href: '/properties' },
-    { label: 'Blog', href: '/blogs' },
-    { label: 'Contact', href: '/contactus' },
-    { label: 'Docs', href: '/documentation' },
-]
+    { label: 'About', href: '/about' },
+    { label: 'Mission & Vision', href: '/mission&vision' },
+    { label: 'Student Projects', href: '/projects' },
+    { label: 'Faculties', href: '/faculty' },
+    { label: 'Courses', href: '/courses' },
+    { label: 'Achievements', href: '/achievements' },
+    { label: 'Videos', href: '/videos' },
+    { label: 'Contact', href: '/contact' },
+];
+
 
 // NavLink Component
 const NavLink: React.FC<{ item: NavLinks; onClick: () => void }> = ({ item, onClick }) => {
@@ -255,7 +260,7 @@ const MegaNavbar: React.FC = () => {
                         </ul>
 
                         {/* Mobile Auth Buttons */}
-                        <div className='flex gap-2 p-6 border-t border-black/10 dark:border-white/10'>
+                        {/* <div className='flex gap-2 p-6 border-t border-black/10 dark:border-white/10'>
                             <Link
                                 href="/signin"
                                 onClick={closeMobileMenu}
@@ -270,7 +275,7 @@ const MegaNavbar: React.FC = () => {
                             >
                                 Sign Up
                             </Link>
-                        </div>
+                        </div> */}
                     </nav>
 
                     {/* Footer Contact Info */}
@@ -288,12 +293,14 @@ const MegaNavbar: React.FC = () => {
                                 Ufillacademy@gmail.com
                             </Link>
                             <Link
-                                href="tel:+1-212-456-7890"
+                                href="tel: +91 8939976607
+"
                                 className='flex items-center gap-2 text-black dark:text-white hover:text-black/60 dark:hover:text-white/60 transition-colors duration-300   text-sm'
                                 onClick={closeMobileMenu}
                             >
                                 <Icon icon={'ph:phone-bold'} width={14} height={14} />
-                                +1-212-456-7890
+                                +91 8939976607
+
                             </Link>
                         </div>
                     </div>

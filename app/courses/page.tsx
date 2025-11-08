@@ -4,6 +4,8 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Image from "next/image";
+import MegaNavbar from "@/components/sections/MegaNavbar";
+import BlendCursor from "@/components/BlendCursor";
 
 // Project data organized by categories
 const projects = [
@@ -20,18 +22,16 @@ const projects = [
             "APP DEVELOPMENT",
             "EMBEDDED SYSTEM",
             "ANIMATION",
-            "13 DAYS SPL BOOT CAMP - MIXED COURSE"
         ],
         images: [
             "/iot.png",
             "/ai-robotics.png",
             "/python.png",
             "/java.png",
-            "/web-dev.jpg",
-            "/app-dev.jpg",
-            "/embedded.jpg",
-            "/animation.jpg",
-            "/bootcamp.jpg"
+            "https://www.ultimatewb.com/blog/wp-content/uploads/html-js-css-website-coding.jpg",
+            "https://ionic.io/blog/wp-content/uploads/2024/07/hybridvnative-feature-image.png",
+            "https://www.velvetech.com/wp-content/uploads/2023/03/what-are-embedded-systems.png",
+            "https://static.vecteezy.com/system/resources/thumbnails/054/731/975/small_2x/waiting-clock-retro-cartoon-animation-mascot-video.jpg",
         ],
 
         link: "#tech-courses",
@@ -45,13 +45,11 @@ const projects = [
             "ABACUS",
             "VEDIC MATHS",
             "GEOMETRY IN ARTS",
-            "COMPETITIVE MATH PREP"
         ],
         images: [
-            "/math/abacus.jpg",
-            "/math/vedic-maths.jpg",
-            "/math/geometry-arts.jpg",
-            "/math/competitive-math.jpg"
+            "https://t4.ftcdn.net/jpg/01/70/69/37/360_F_170693743_z3FEBFwAupuCZ9BEsAdYOetQFXPAkYIZ.jpg",
+            "https://abacusmaster.com/blog/images/1112/Vedic-Math.jpg",
+            "https://thumbs.dreamstime.com/b/geometry-12884537.jpg",
         ],
         link: "#math-courses",
         className: "font-frijole",
@@ -66,9 +64,9 @@ const projects = [
             "YOGA & MEDITATION"
         ],
         images: [
-            "/fitness/chess.jpg",
-            "/fitness/carrom.jpg",
-            "/fitness/yoga.jpg"
+            "https://cdn.pixabay.com/photo/2022/03/04/21/46/chess-7048054_1280.jpg",
+            "https://cdn.pixabay.com/photo/2013/07/25/12/06/carrom-167046_1280.jpg",
+            "https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?cs=srgb&dl=pexels-prasanthinturi-1051838.jpg&fm=jpg"
         ],
         link: "#fitness-courses",
         className: "font-frijole",
@@ -81,19 +79,13 @@ const projects = [
             "DRAWING",
             "HAND WRITING & CALLIGRAPHY",
             "PHOTOGRAPHY",
-            "MUSIC",
-            "PAINTING",
-            "FILM MAKING",
             "ART & CRAFT"
         ],
         images: [
-            "/hobbies/drawing.jpg",
-            "/hobbies/calligraphy.jpg",
-            "/hobbies/photography.jpg",
-            "/hobbies/music.jpg",
-            "/hobbies/painting.jpg",
-            "/hobbies/film-making.jpg",
-            "/hobbies/art-craft.jpg"
+            "https://media.istockphoto.com/id/646498390/photo/joyful-young-female-art-student-paints-in-a-studio.jpg?s=612x612&w=0&k=20&c=XaLLJThrEC_YkAZ3jZ7K0knPy5V_UIgIvQBQr_Cv02A=",
+            "https://static6.depositphotos.com/1001102/631/i/450/depositphotos_6312957-stock-photo-calligraphy3.jpg",
+            "https://images.pexels.com/photos/212372/pexels-photo-212372.jpeg?cs=srgb&dl=pexels-asphotography-212372.jpg&fm=jpg",
+            "https://thumbs.dreamstime.com/b/group-three-children-playing-wooden-models-art-craft-class-school-group-teens-art-craft-class-221823187.jpg"
         ],
         link: "#hobby-courses",
         className: "font-frijole",
@@ -104,21 +96,13 @@ const projects = [
         description: "Academic excellence through comprehensive tutoring and competitive exam preparation.",
         sessions: [
             "TUITIONS - GRADE 3 TO 12",
-            "RD SHARMA MATHS",
-            "NEET",
-            "GATE",
-            "JEE",
             "PHONICS",
             "SPOKEN ENGLISH"
         ],
         images: [
-            "/study/tuitions.jpg",
-            "/study/rd-sharma.jpg",
-            "/study/neet.jpg",
-            "/study/gate.jpg",
-            "/study/jee.jpg",
-            "/study/phonics.jpg",
-            "/study/spoken-english.jpg"
+            "https://t3.ftcdn.net/jpg/04/49/24/62/360_F_449246206_d8zZin2xak5IjmqMXviQmS66puENGA2u.jpg",
+            "https://teachertrainingindia.co.in/blog/wp-content/uploads/2025/04/88-1.webp",
+            "https://assets.superblog.ai/site_cuid_ckucmy84h97811nplkx3qfbgx/images/course1663654149-1707991844592-compressed.jpg"
         ],
         link: "#study-courses",
         className: "font-frijole",
@@ -181,6 +165,8 @@ function ScrollCard({
 
     return (
         <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+            <MegaNavbar/>
+      <BlendCursor/>
             <motion.div
                 className="flex flex-col relative rounded-xl w-[95vw] max-w-6xl mx-auto p-6 lg:p-12 border-2 border-foreground/20 bg-background shadow-2xl"
                 style={{
@@ -334,7 +320,7 @@ function ScrollCard({
 }
 
 // Main Section Component
-export default function ScrollStackSection() {
+export default function CoursesPage() {
     const container = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -375,7 +361,7 @@ export default function ScrollStackSection() {
             <div className="container mx-auto px-2">
                 {/* Section Header with reduced margins */}
                 <div className="text-center mb-4"> {/* Reduced from mb-16 to mb-4 */}
-                    <h2 className="font-bowlby text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mb-2"> {/* Reduced from mb-4 to mb-2 */}
+                    <h2 className="font-bowlby text-4xl md:text-5xl lg:text-6xl font-normal text-foreground mt-32 mb-2"> {/* Reduced from mb-4 to mb-2 */}
                         U-Fill Academy Courses
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

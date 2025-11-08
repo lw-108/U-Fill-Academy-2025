@@ -1,13 +1,18 @@
 "use client";
 
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
+import MegaNavbar from "@/components/sections/MegaNavbar";
+import BlendCursor from "@/components/BlendCursor";
 
-export default function MissionVisionSection() {
+
+export default function MissionVisionPage() {
   return (
     <section
       id="mission-vision"
       className="relative z-10 px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-28 bg-background transition-colors duration-500"
     >
+      <MegaNavbar/>
+      <BlendCursor/>
       {/* Header */}
       <div className="max-w-4xl mx-auto mb-14 text-center">
         <h2 className="font-bowlby text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-foreground dark:text-white leading-tight">

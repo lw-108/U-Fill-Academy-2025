@@ -6,7 +6,7 @@ import ThirukkuralSection from "@/components/sections/ThirukkuralSection";
 import AboutSection from "@/components/sections/about-section";
 import MissionVisionSection from "@/components/sections/mission-vision-section";
 import StepperPage from "@/components/sections/StepperPage";
-import StudentProjectsSection from "@/components/sections/student-projects-section";
+// import StudentProjectsSection from "@/components/sections/student-projects-section";
 import FacultySection from "@/components/sections/faculty-section";
 import ScrollStackSection from "@/components/sections/ScrollStackSection";
 import VideoCarouselSection from "@/components/sections/video-carousel-section";
@@ -32,7 +32,7 @@ export default function Page() {
         <AboutSection />
         <MissionVisionSection />
         <StepperPage />
-        <StudentProjectsSection />
+        {/* <StudentProjectsSection /> */}
         <FacultySection />
         <ScrollStackSection />
         <VideoCarouselSection />

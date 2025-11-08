@@ -57,10 +57,10 @@ const defaultSections = [
 ];
 
 const defaultSocialLinks = [
-  { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-  { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
+  { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/u_fill_academy/", label: "Instagram" },
+  { icon: <FaFacebook className="size-5" />, href: "https://www.facebook.com/p/%F0%9D%97%A8-%F0%9D%97%99%F0%9D%97%9C%F0%9D%97%9F%F0%9D%97%9F-%F0%9D%97%94%F0%9D%97%96%F0%9D%97%94%F0%9D%97%97%F0%9D%97%98%F0%9D%97%A0%F0%9D%97%AC-61575802616072/", label: "Facebook" },
   { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
-  { icon: <FaLinkedin className="size-5" />, href: "#", label: "LinkedIn" },
+  { icon: <FaLinkedin className="size-5" />, href: "https://in.linkedin.com/in/ufillacademy", label: "LinkedIn" },
   { icon: <FaYoutube className="size-5" />, href: "#", label: "YouTube" },
 ];
 
@@ -72,7 +72,7 @@ const defaultLegalLinks = [
 const Footer7 = ({
   logo = {
     url: "/",
-    src: "/images/u-fill-logo.png",
+    src: "/u-robo.png",
     alt: "U Fill Academy Logo",
     title: "U Fill Academy",
   },
@@ -89,17 +89,30 @@ const Footer7 = ({
           {/* Left Side - Logo & Info */}
           <div className="flex flex-col gap-6 max-w-sm">
             <div className="flex items-center gap-3">
-              <a href={logo.url} className="flex items-center gap-2">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  title={logo.title}
-                  className="h-10 w-10 object-contain"
-                />
-                <h2 className="text-2xl font-extrabold tracking-tight">
-                  {logo.title}
-                </h2>
-              </a>
+              <span className="flex items-center">
+                {React.createElement(
+                  "div",
+                  { className: "w-15 h-15 flex items-center justify-center" },
+                  React.createElement("img", {
+                    src: "/u-robo.png",
+                    alt: "U-Fill Academy Logo",
+                    className: "w-full h-full object-contain select-none",
+                  })
+                )}
+                {/* Big U */}
+                <span className="text-blue-500 text-7xl font-extrabold leading-none mr-1">
+                  U
+                </span>
+                {/* FILL + ACADEMY stacked closely */}
+                <span className="flex flex-col leading-[0.9]">
+                  <span className="text-black dark:text-white text-2xl font-bold">
+                    FILL
+                  </span>
+                  <span className="text-black dark:text-white text-sm font-medium tracking-tight">
+                    ACADEMY
+                  </span>
+                </span>
+              </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {description}

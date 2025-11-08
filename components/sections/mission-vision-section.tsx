@@ -27,10 +27,9 @@ export default function MissionVisionSection() {
                 Mission
               </h1>
               <p className="mx-auto max-w-3xl sm:max-w-4xl text-lg sm:text-xl md:text-2xl font-medium text-black/90 dark:text-white/90 leading-relaxed text-pretty">
-                To empower tribal and underprivileged students through free,
-                quality education and skill-based training — helping them
-                achieve academic excellence and prepare for a brighter, more
-                independent future.
+                To empower tribal and poor students through free, quality
+                education and skill-based training, helping them achieve
+                academic excellence and prepare for a brighter future.
               </p>
             </div>
           }
@@ -41,9 +40,7 @@ export default function MissionVisionSection() {
               Vision
             </h1>
             <p className="mx-auto max-w-3xl sm:max-w-4xl text-lg sm:text-xl md:text-2xl font-medium text-white/90 dark:text-black/90 leading-relaxed text-pretty">
-              A world where every child — regardless of background — has access
-              to education that uplifts, empowers, and transforms lives for a
-              stronger, more inclusive future.
+             A future where no child is left behind due to financial or social barriers– education that uplifts, empowers, and transforms lives.
             </p>
           </div>
         </MaskContainer>

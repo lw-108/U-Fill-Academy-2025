@@ -4,6 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import MegaNavbar from "@/components/sections/MegaNavbar";
+import BlendCursor from "@/components/BlendCursor";
 
 const slides = [
   {
@@ -26,7 +28,7 @@ const slides = [
   },
 ];
 
-export default function StudentProjectSection() {
+export default function ProjectsPage() {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
@@ -38,7 +40,9 @@ export default function StudentProjectSection() {
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center bg-background py-20 text-black transition-colors duration-500 dark:text-white">
+    <section className="relative flex min-h-screen items-center justify-center bg-background py-20 text-black transition-colors duration-500 dark:text-white mt-45">
+      <MegaNavbar/>
+      <BlendCursor/>
       <div className="w-full max-w-7xl px-4 sm:px-6 md:px-12 lg:px-20">
         {/* Title Section - Big and Centered Above Content */}
         <div className="mb-16 text-center">
