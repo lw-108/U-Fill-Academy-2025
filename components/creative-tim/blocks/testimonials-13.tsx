@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 
-export function Testimonials() {
+export default function TestimonialsBlock() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">

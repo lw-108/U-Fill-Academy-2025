@@ -31,8 +31,8 @@ export default function BlendCursor() {
     requestAnimationFrame(animate);
 
     // Grow/Shrink effect on hover over interactive elements
-    const grow = () => setSize(100);
-    const shrink = () => setSize(50);
+    const grow = () => setSize(30);
+    const shrink = () => setSize(20);
     const hoverables = document.querySelectorAll("a, button, [data-cursor='hover']");
     hoverables.forEach((el) => {
       el.addEventListener("mouseenter", grow);

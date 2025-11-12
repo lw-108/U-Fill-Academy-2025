@@ -178,7 +178,7 @@ const MegaNavbar: React.FC = () => {
                                 Sign In
                             </Link> */}
                             <Link
-                                href="/signup"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLScG3nDXAdVCfPN0fZbw_i72XbvapbCYzYSBtxlm6o2IHPQygg/viewform?pli=1"
                                 className={`px-4 py-3 rounded-xl   transition-all duration-300 text-sm bg-black dark:bg-white text-white dark:text-black hover:bg-black/80 dark:hover:bg-white/80 border border-black dark:border-white`}
                             >
                                 Register

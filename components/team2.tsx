@@ -1,7 +1,6 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import MegaNavbar from "@/components/sections/MegaNavbar";
-import BlendCursor from "@/components/BlendCursor";
 
 interface TeamMember {
   id: string;
@@ -20,14 +19,14 @@ interface Team1Props {
   members?: TeamMember[];
 }
 
-const FacultyPage = ({
-  heading = "Our Faculty",
-  description = "Our diverse team of expert educators brings together decades of experience in teaching, curriculum development, and student mentorship.",
+const Team2 = ({
+  heading = "Team",
+  description = "Our diverse team of experts brings together decades of experience in design, engineering, and product development.",
   members = [
     {
       id: "member-1",
-      name: "Dr. Sarah Chen",
-      role: "Mathematics Department Head",
+      name: "Sarah Chen",
+      role: "CEO & Founder",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
       github: "#",
       twitter: "#",
@@ -35,8 +34,8 @@ const FacultyPage = ({
     },
     {
       id: "member-2",
-      name: "Prof. Marcus Rodriguez",
-      role: "Science & Technology Director",
+      name: "Marcus Rodriguez",
+      role: "CTO",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-2.webp",
       github: "#",
       twitter: "#",
@@ -45,7 +44,7 @@ const FacultyPage = ({
     {
       id: "member-3",
       name: "Emily Watson",
-      role: "Creative Arts Coordinator",
+      role: "Head of Design",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-3.webp",
       github: "#",
       twitter: "#",
@@ -54,7 +53,7 @@ const FacultyPage = ({
     {
       id: "member-4",
       name: "David Kim",
-      role: "Coding & Robotics Instructor",
+      role: "Lead Engineer",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-4.webp",
       github: "#",
       twitter: "#",
@@ -63,7 +62,7 @@ const FacultyPage = ({
     {
       id: "member-5",
       name: "Lisa Thompson",
-      role: "Language Arts Specialist",
+      role: "Product Manager",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-5.webp",
       github: "#",
       twitter: "#",
@@ -72,7 +71,7 @@ const FacultyPage = ({
     {
       id: "member-6",
       name: "Alex Johnson",
-      role: "Test Preparation Coach",
+      role: "UX Designer",
       avatar: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-6.webp",
       github: "#",
       twitter: "#",
@@ -81,12 +80,10 @@ const FacultyPage = ({
   ],
 }: Team1Props) => {
   return (
-    <section className="py-24 lg:py-32 bg-background">
-      <MegaNavbar/>
-      <BlendCursor/>
+    <section className="py-24 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <h2 className="font-bowlby text-4xl md:text-6xl text-center font-normal text-foreground mb-6">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight lg:text-5xl">
             {heading}
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed">
@@ -96,19 +93,19 @@ const FacultyPage = ({
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {members.map((member) => (
-            <div key={member.id} className="group p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-300">
+            <div key={member.id} className="p-6">
               <div className="flex flex-col items-center text-center">
                 <div className="mb-4">
-                  <Avatar className="size-20 lg:size-24 group-hover:scale-105 transition-transform duration-300">
-                    <AvatarImage src={member.avatar} alt={member.name} />
+                  <Avatar className="size-20 lg:size-24">
+                    <AvatarImage src={member.avatar} />
                     <AvatarFallback className="text-lg font-semibold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                      {member.name}
                     </AvatarFallback>
                   </Avatar>
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="mb-1 text-xl font-semibold text-foreground">{member.name}</h3>
+                  <h3 className="mb-1 text-lg font-semibold">{member.name}</h3>
                   <p className="text-primary text-sm font-medium">
                     {member.role}
                   </p>
@@ -118,25 +115,25 @@ const FacultyPage = ({
                   {member.github && (
                     <a
                       href={member.github}
-                      className="bg-muted/50 rounded-lg p-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="bg-muted/50 rounded-lg p-2"
                     >
-                      <Github className="size-4" />
+                      <Github className="text-muted-foreground size-4" />
                     </a>
                   )}
                   {member.twitter && (
                     <a
                       href={member.twitter}
-                      className="bg-muted/50 rounded-lg p-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="bg-muted/50 rounded-lg p-2"
                     >
-                      <Twitter className="size-4" />
+                      <Twitter className="text-muted-foreground size-4" />
                     </a>
                   )}
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
-                      className="bg-muted/50 rounded-lg p-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+                      className="bg-muted/50 rounded-lg p-2"
                     >
-                      <Linkedin className="size-4" />
+                      <Linkedin className="text-muted-foreground size-4" />
                     </a>
                   )}
                 </div>
@@ -149,4 +146,4 @@ const FacultyPage = ({
   );
 };
 
-export default FacultyPage;
+export { Team2 };

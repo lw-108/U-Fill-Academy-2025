@@ -369,7 +369,7 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`px-8 py-3 rounded-lg font-semibold transition-colors border-2 border-foreground text-foreground hover:bg-foreground hover:text-background`}
+                  className={`px-8 py-3 rounded-full font-semibold transition-colors border-2 border-foreground text-foreground hover:bg-foreground hover:text-background`}
                   {...backButtonProps}
                 >
                   {backButtonText}
@@ -377,7 +377,7 @@ export default function Stepper({
               )}
               <button
                 onClick={isLastStep ? handleComplete : handleNext}
-                className="px-8 py-3 rounded-lg font-semibold transition-colors border-2 bg-foreground text-background hover:bg-foreground/90"
+                className="px-8 py-3 rounded-full font-semibold transition-colors border-2 bg-foreground text-background hover:bg-foreground/90"
                 {...nextButtonProps}
               >
                 {isLastStep ? 'Complete Journey' : nextButtonText}
